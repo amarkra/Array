@@ -1,0 +1,24 @@
+Min and Max in Array!!!
+eg: 
+Input: arr[] = [3, 2, 1, 56, 10000, 167]
+Output: 1 10000
+Explanation: minimum and maximum elements of array are 1 and 10000.
+
+Sol//
+      class Solution {
+    public Pair<Integer, Integer> getMinMax(int[] arr) {
+        // Code Here
+        int Maximum = Integer.MIN_VALUE;
+        int Minimum = Integer.MAX_VALUE;
+        for(int i = 0;i < arr.length;i++){
+            if(arr[i] > Maximum){
+                Maximum = arr[i];
+            }
+            if(arr[i] < Minimum){
+                Minimum = arr[i];
+            }
+        }
+        return new Pair<> (Minimum , Maximum);
+    }
+}
+
