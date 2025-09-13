@@ -1,0 +1,25 @@
+217. Contains Duplicate
+
+Example 1:
+
+Input: nums = [1,2,3,1]
+
+Output: true
+
+Explanation:
+
+The element 1 occurs at the indices 0 and 3.
+
+Sol//
+     class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> seen = new HashSet<>();
+        for(int num : nums) {
+            if(seen.contains(num))
+            return true;
+            seen.add(num);
+            
+        }
+        return false;
+    }
+}
